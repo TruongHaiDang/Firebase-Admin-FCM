@@ -32,4 +32,8 @@ $(document).ready(function () {
                 .catch((err) => {
                     console.log('err', err)
                 });
+
+    messaging.onMessage(function(payload) {
+        console.log('onMessage', payload)
+    })
 });

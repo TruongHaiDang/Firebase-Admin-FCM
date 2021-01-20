@@ -1,5 +1,5 @@
-importScripts (' https://www.gstatic.com/firebasejs/4.8.1/firebase-app.js ');
-importScripts (' https://www.gstatic.com/firebasejs/4.8.1/firebase-messaging.js ');
+importScripts (' https://www.gstatic.com/firebasejs/8.2.3/firebase-app.js ');
+importScripts (' https://www.gstatic.com/firebasejs/8.2.3/firebase-messaging.js ');
 
 var firebaseConfig = {
     apiKey: "AIzaSyCVc4J5R1wJX96V3m495qZmHHaMnx_xKSI",
@@ -13,6 +13,12 @@ var firebaseConfig = {
 };
 // Initialize Firebase
 firebase.initializeApp(firebaseConfig);
-firebase.analytics();
 
 const messaging = firebase.messaging();
+messaging.setBackgroundMessageHandler(function(payload) {
+    const title = "Hai Dang",
+    const options = {
+        body: payload.data
+    }
+    return self.registration.showNotification(title, options)
+})
