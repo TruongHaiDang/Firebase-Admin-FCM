@@ -1,0 +1,26 @@
+POST http://localhost:6969/ind 
+
+###
+POST http://localhost:6969/oneDevice
+Content-Type: application/json
+
+{
+    "registrationToken": "cStjtTv4JLNssKZph-4iuY:APA91bEXf8U_f4SQGgDUfkiQQkYTXVwp3Vnnw0F9LjNKYi92VQrQFsJvYeUOiCpNftZOZQhSCOhFnrWLIyiIrxlGMto0rPktKdssK0DNwbuhax20rjXp7EjQEWIhahI86hCyLK1HdKNn",
+    "payload": {
+        "name": "Dan"
+    }
+}
+
+###
+POST http://localhost:6969/multiDevices
+Content-Type: application/json
+
+{
+    "registrationToken": {
+        "device1": "cStjtTv4JLNssKZph-4iuY:APA91bEXf8U_f4SQGgDUfkiQQkYTXVwp3Vnnw0F9LjNKYi92VQrQFsJvYeUOiCpNftZOZQhSCOhFnrWLIyiIrxlGMto0rPktKdssK0DNwbuhax20rjXp7EjQEWIhahI86hCyLK1HdKNn",
+        "device2": "ete98o8wVz_ZZ4cNOU2WeQ:APA91bFztXDwj3rSIRHS9QgzT2dTZLpHXA4Rzhx6olLcqh2jojinPJaWwoT6t05hrgV90jYsiHsDJeABb52DQcXLMHLCBMpgxJzzso33pLeHyoLvFs54G2BElvgPIxmW3XeMyA9mqqda"
+    },
+    "payload": {
+        "name": "Dan"
+    }
+}
